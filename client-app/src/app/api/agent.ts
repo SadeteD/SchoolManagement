@@ -1,7 +1,6 @@
 import axios, { AxiosError, AxiosResponse } from "axios";
 import { Orari } from "../models/orari";
 import { Lenda } from "../models/lenda";
-import { Postimi } from "../models/postimi";
 import { Prindi } from "../models/prindi";
 import { Nxenesi } from "../models/nxenesi";
 import { CustomNxenesi } from "../models/customNxenesi";
@@ -17,10 +16,8 @@ import { Salla } from "../models/salla";
 import { Paralelja } from "../models/paralelja";
 import { Klasa } from "../models/klasa";
 import { Vleresimi } from "../models/Vleresimi";
-import { Njoftimi } from "../models/njoftimi";
 import { Libri } from "../models/libri";
 import { Aktiviteti } from "../models/Aktiviteti";
-import { Autobusi } from "../models/Autobusi";
 import { ProfKlasa } from "../models/profKlasa";
 import { Familja } from "../models/familja";
 import { Syllabusi } from "../models/syllabusi";
@@ -105,15 +102,6 @@ const Aktivitetet = {
   delete: (id: string) => axios.delete<void>(`/aktivitetet/${id}`),
 };
 
-
-const Postimet = {
-  list: () => requests.get<Postimi[]>("/Postimet"),
-  details: (id: string) => requests.get<Postimi>(`/postimet/${id}`),
-  create: (postimi: Postimi) => axios.post<void>(`/postimet/`, postimi),
-  update: (postimi: Postimi) =>
-    axios.put<void>(`/postimet/${postimi.id}`, postimi),
-  delete: (id: string) => axios.delete<void>(`/postimet/${id}`),
-};
 const Lendet = {
   list: () => requests.get<Lenda[]>("/lendet"),
   details: (id: string) => requests.get<Lenda>(`/lendet/${id}`),
@@ -160,14 +148,7 @@ const Familjet = {
     ),
   delete: (id: string) => axios.delete<void>(`/Familjet/${id}`),
 };
-const Njoftimet = {
-  list: () => requests.get<Njoftimi[]>("/njoftimet"),
-  details: (id: string) => requests.get<Njoftimi>(`/njoftimet/${id}`),
-  create: (njoftimi: Njoftimi) => axios.post<void>(`/njoftimet`, njoftimi),
-  update: (njoftimi: Njoftimi) =>
-    axios.put<void>(`/njoftimet/${njoftimi.njoftimiId}`, njoftimi),
-  delete: (id: string) => axios.delete<void>(`/njoftimet/${id}`),
-};
+
 const Account = {
   current: () => requests.get<Admin>("/account"),
   login: (user: AdminFormValues) =>
@@ -270,11 +251,9 @@ const Librat = {
 const agent = {
   Profesoret,
   Oraret,
-  Postimet,
   Lendet,
   Prinderit,
   Nxenesit,
-  Njoftimet,
   Account,
   AccountProf,
   AccountPrindi,

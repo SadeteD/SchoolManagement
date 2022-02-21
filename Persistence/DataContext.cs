@@ -12,22 +12,18 @@ namespace Persistence
         {
 
         }
-        public DbSet<Postimi> Postimet { get; set; }
         public DbSet<Profesori> Profesoret { get; set; }
         public DbSet<Lenda> Lendet { get; set; }
         public DbSet<Prindi> Prinderit { get; set; }
         public DbSet<Syllabusi> Syllabuset { get; set; }
         public DbSet<Nxenesi> Nxenesit { get; set; }
         public DbSet<Familja> Familjet { get; set; }
-        public DbSet<Laburatiori> Laburatioret { get; set; }
         public DbSet<Kontakti> Kontaktet { get; set; }
         public DbSet<Paralelja> Paralelet { get; set; }
         public DbSet<Klasa> Klasat { get; set; }
         public DbSet<Salla> Sallat { get; set; }
         public DbSet<Orari> Oraret { get; set; }
-        public DbSet<Pajisja> Pajisjet { get; set; }
         public DbSet<Vleresimi> Vleresimi { get; set; }
-        public DbSet<Njoftimi> Njoftimet { get; set; }
         public DbSet<FeedbackToNxenesi> FeedbackToNxenesit { get; set; }
         public DbSet<Libri> Librat { get; set; }
         public DbSet<Aktiviteti> Aktivitetet { get; set; }
@@ -51,10 +47,6 @@ namespace Persistence
                 .WithMany(p => p.Kontaktet)
                 .HasForeignKey(pp => pp.PrindiId);
 
-            modelbuilder.Entity<Laburatiori>()
-                .HasOne(p => p.Lenda)
-                .WithMany(p => p.Laburatoret)
-                .HasForeignKey(pp => pp.LendaId);
 
             modelbuilder.Entity<Orari>()
                 .HasKey(pk => new { pk.OrariId });
@@ -68,10 +60,7 @@ namespace Persistence
            .WithMany(p => p.Lendet)
             .HasForeignKey(pp => pp.SyllabusiId);
 
-            modelbuilder.Entity<Pajisja>()
-                .HasOne(p => p.Laburatiori)
-                .WithMany(p => p.Pajisjet)
-                .HasForeignKey(pp => pp.LaburatioriId);
+            
 
             modelbuilder.Entity<Klasa>()
                 .HasOne(p => p.Paralelja)

@@ -31,37 +31,7 @@ namespace Persistence
                     await userManager.CreateAsync(user, "Pa$$w0rd");
                 }
             }
-
-            if (context.Postimet.Any()) return;
-
-            var postimet = new List<Postimi>
-            {
-                new Postimi
-                {
-                    Titulli= "Postimi 1",
-                    Data = DateTime.Now.AddMinutes(-1000),
-                    Permbajtja = "Ky eshte nje postim testues 1",
-                },
-                new Postimi
-                {
-                    Titulli= "Postimi 2",
-                    Data = DateTime.Now.AddMinutes(-2000),
-                    Permbajtja = "Ky eshte nje postim testues 2",
-                },
-                new Postimi
-                {
-                    Titulli= "Postimi 3",
-                    Data = DateTime.Now.AddMinutes(-3000),
-                    Permbajtja = "Ky eshte nje postim testues 3",
-                }
-            };
-
-
-            await context.Postimet.AddRangeAsync(postimet);
-
             await context.SaveChangesAsync();
-
-
         }
        
         //seed data for Professor

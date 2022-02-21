@@ -16,7 +16,7 @@ export default observer(function NavBar() {
       <Container>
         <Menu.Item header>
           <img
-            src="/assets/school.png"
+            src="/assets/logo.png"
             alt="logo"
             style={{ marginRight: "10px" }}
           />

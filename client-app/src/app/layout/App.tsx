@@ -9,8 +9,6 @@ import LendetDashboard from "../../features/lendet/dashboard/LendetDashboard";
 import LendetDetails from "../../features/lendet/details/LendetDetails";
 import LendaForm from "../../features/lendet/form/LendaForm";
 import NxenesiDashboard from "../../features/nxenesit/dashboard/NxenesiDashboard";
-import PostimetDashboard from "../../features/postimet/dashboard/PostimetDashboard";
-import PostimetDetails from "../../features/postimet/details/PostimetDetails";
 import LoginFormPrindi from "../../features/prinderit/form/LoginFormPrindi";
 import ShowPrinderit from "../../features/prinderit/showPrindi";
 import LoginFormProf from "../../features/profesoret/form/LoginFormProf";
@@ -26,7 +24,6 @@ import adminPage from "../../features/adminPage";
 import NavBarProf from "../../professorFeatures/NavBarProf";
 import PrindiPage from "../../prindiFeatures/PrindiPage";
 import NavBarPrindi from "../../prindiFeatures/NavBarPrindi";
-import ShowKontaktet from "../../prindiFeatures/kontaktet";
 import ShowKontaktetProf from "../../professorFeatures/kontaktetProf";
 import PrindProfileDashboard from "../../features/prinderit/prindProfile/PrindProfileDashboard";
 import kontaktet from "../../prindiFeatures/kontaktet";
@@ -40,8 +37,6 @@ import ParaleljaDashboard from "../../features/paralelet/dashboard/ParaleljaDash
 import KlasaDashboard from "../../features/klasat/dashboard/KlasaDashboard";
 import KlasaDetails from "../../features/klasat/details/KlasaDetails";
 import ShowVlersimet from "../../professorFeatures/vleresimet";
-import NjoftimiDashboard from "../../features/njoftimet/dashboard/NjoftimiDashboard";
-import DashboardNjoftimi from "../../features/njoftimet/dashboardFromNxenesiandProfesori/DashboardNjoftimi";
 import LibriDashboard from "../../features/librat/dashboart/LibriDashboard";
 import DashboardLibri from "../../features/librat/libratViewFromNxenesi/DashboardLibri";
 import FamiljaDetails from "../../features/familjet/FamiljaDetails";
@@ -88,15 +83,16 @@ function App() {
                   path="/professorPage/ProfProfili"
                   component={ProfProfileDashboard}
                 />
+                
                 <Route
                   path="/professorPage/Vlersimet"
                   component={ShowVlersimet}
                 />
-                <Route path="/professorPage/ProfNjoftimet" component={DashboardNjoftimi} />
                 <Route
                   path="/professorPage/Kontaktet"
                   component={ShowKontaktetProf}
                 />
+
               </Switch>
             </Container>
           </>
@@ -143,12 +139,9 @@ function App() {
                   component={NxenesiDashboard}
                 />
                 <Route
-                  path="/nxenesiPage/njoftimet/"
-                  component={DashboardNjoftimi}
-                />
-                <Route
-                  path="/nxenesiPage/librat/"
-                  component={DashboardLibri}
+                  exact
+                  path="/nxenesiPage/librat"
+                  component={LibriDashboard}
                 />
                 <Route
                   path="/nxenesiPage/feedbacks"
@@ -182,18 +175,8 @@ function App() {
                   component={ShowProfessors}
                 />
                 <Route path="/adminPage/oraret" component={OraretDashboard} />
-                <Route
-                  exact
-                  path="/adminPage/postimet"
-                  component={PostimetDashboard}
-                />
-                <Route
-                  path="/adminPage/postimet/:id"
-                  component={PostimetDetails}
-                />
                 <Route path="/adminPage/nxenesit" component={Dashboard} />
                 <Route path="/adminPage/prinderit" component={ShowPrinderit} />
-                <Route path="/adminPage/njoftimet" component={NjoftimiDashboard} />
                 <Route
                   exact
                   path="/adminPage/lendet"

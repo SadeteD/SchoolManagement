@@ -11,7 +11,7 @@ export default observer(function NavBarNxenesi() {
       <Container>
         <Menu.Item header>
           <img
-            src="/assets/school.png"
+            src="/assets/logo.png"
             alt="logo"
             style={{ marginRight: "10px" }}
           />
@@ -19,8 +19,6 @@ export default observer(function NavBarNxenesi() {
         </Menu.Item>
 
         <Menu.Item as={NavLink} to="/nxenesiPage/profili" content="Profili im" />
-        <Menu.Item as={NavLink} to="/nxenesiPage/njoftimet" content='Njoftimet' />
-        <Menu.Item as={NavLink} to="/nxenesiPage/aktivitetet" content='Aktivitetet' />
         <Menu.Item as={NavLink} to="/nxenesiPage/librat" content='Librat' />
         <Menu.Item as={NavLink} to="/nxenesiPage/feedbacks" content='Feedbacks' />
         <Menu.Item as={NavLink} to="/nxenesiPage/oraret" content='Oraret' />

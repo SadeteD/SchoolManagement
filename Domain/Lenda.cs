@@ -11,7 +11,6 @@ namespace Domain
         public Guid SyllabusiId {get;set;}
         public Syllabusi Syllabusi {get;set;}
         public DateTime DataEShtimit{get;set;}
-        public ICollection<Laburatiori> Laburatoret{get;set;}
         public ICollection<Libri> Librat { get; set; }
 
         public ICollection<Profesori> Profesoret { get; set; }

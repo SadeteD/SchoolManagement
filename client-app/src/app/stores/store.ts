@@ -1,7 +1,6 @@
 import { createContext, useContext } from "react";
 import ProfesoriStore from "./profesoriStore";
 import lendaStore from "./lendaStore";
-import PostimiStore from "./postimetStore";
 import NxenesiStore from "./nxenesiStore";
 import ModalStore from "./modalStore";
 import AdminStore from "./adminStore";
@@ -10,7 +9,6 @@ import PrindiStore from "./prindiStore";
 import PrindStoreAccount from "./prindStoreAccount";
 import nxenesiStore from "./nxenesiStore";
 import FeedbackStore from "./feedbackStore";
-import NjoftimiStore from "./njoftimiStore";
 import KontaktiStore from "./kontaktiStore";
 import OrariStore from "./orariStore";
 import SallaStore from "./sallaStore";
@@ -26,7 +24,6 @@ import SyllabusiStore from "./syllabusiStore";
 interface Store {
   profesoriStore: ProfesoriStore;
   orariStore: OrariStore;
-  postimiStore: PostimiStore;
   lendaStore: lendaStore;
   syllabusiStore: syllabusiStore;
   modalStore: ModalStore;
@@ -36,7 +33,6 @@ interface Store {
   nxenesiStore: nxenesiStore;
   prindStoreAccount: PrindStoreAccount;
   feedbackStore: FeedbackStore;
-  njoftimiStore: NjoftimiStore;
   kontaktiStore: KontaktiStore;
   sallaStore: SallaStore;
   paraleljaStore: ParaleljaStore;
@@ -50,7 +46,6 @@ export const store: Store = {
   profesoriStore: new ProfesoriStore(),
   syllabusiStore: new SyllabusiStore(),
   orariStore: new OrariStore(),
-  postimiStore: new PostimiStore(),
   lendaStore: new lendaStore(),
   nxenesiStore: new NxenesiStore(),
   modalStore: new ModalStore(),
@@ -59,7 +54,6 @@ export const store: Store = {
   prindiStore: new PrindiStore(),
   prindStoreAccount: new PrindStoreAccount(),
   feedbackStore: new FeedbackStore(),
-  njoftimiStore: new NjoftimiStore(),
   kontaktiStore: new KontaktiStore(),
   sallaStore: new SallaStore(),
   paraleljaStore: new ParaleljaStore(),
