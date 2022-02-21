@@ -440,7 +440,6 @@ namespace Persistence.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Lloji = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    NrPaisjeve = table.Column<int>(type: "int", nullable: false),
                     DataEKrijimit = table.Column<DateTime>(type: "datetime2", nullable: false),
                     LendaId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },

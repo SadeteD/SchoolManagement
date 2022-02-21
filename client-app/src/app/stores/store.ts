@@ -11,30 +11,24 @@ import PrindStoreAccount from "./prindStoreAccount";
 import nxenesiStore from "./nxenesiStore";
 import FeedbackStore from "./feedbackStore";
 import NjoftimiStore from "./njoftimiStore";
-import LaburatoriStore from "./laburatoriStore";
 import KontaktiStore from "./kontaktiStore";
 import OrariStore from "./orariStore";
 import SallaStore from "./sallaStore";
 import ParaleljaStore from "./paraleljaStore";
 import KlasaStore from "./klasaStore";
 import VlersimiStore from "./vlersimiStore";
-import PajisjaStore from "./pajisjetStore";
 import LibriStore from "./libriStore";
-import AktivitetiStore from "./aktivitetiStore";
-import AutobusiStore from "./autobusiStore";
 import FamiljaStore from "./familjaStore";
 import syllabusiStore from "./syllabusiStore";
 import SyllabusiStore from "./syllabusiStore";
+//import StudentetStore from "./studentetStore";
 
 interface Store {
   profesoriStore: ProfesoriStore;
-  autobusiStore: AutobusiStore;
-  aktivitetiStore: AktivitetiStore;
   orariStore: OrariStore;
   postimiStore: PostimiStore;
   lendaStore: lendaStore;
   syllabusiStore: syllabusiStore;
-  pajisjetStore: PajisjaStore;
   modalStore: ModalStore;
   adminStore: AdminStore;
   commonStore: CommonStore;
@@ -43,7 +37,6 @@ interface Store {
   prindStoreAccount: PrindStoreAccount;
   feedbackStore: FeedbackStore;
   njoftimiStore: NjoftimiStore;
-  laburatoriStore: LaburatoriStore;
   kontaktiStore: KontaktiStore;
   sallaStore: SallaStore;
   paraleljaStore: ParaleljaStore;
@@ -51,11 +44,10 @@ interface Store {
   vleresimiStore: VlersimiStore;
   libriStore: LibriStore;
   familjaStore: FamiljaStore;
+ // studentetStore: StudentetStore;
 }
 export const store: Store = {
   profesoriStore: new ProfesoriStore(),
-  autobusiStore: new AutobusiStore(),
-  aktivitetiStore: new AktivitetiStore(),
   syllabusiStore: new SyllabusiStore(),
   orariStore: new OrariStore(),
   postimiStore: new PostimiStore(),
@@ -68,15 +60,14 @@ export const store: Store = {
   prindStoreAccount: new PrindStoreAccount(),
   feedbackStore: new FeedbackStore(),
   njoftimiStore: new NjoftimiStore(),
-  laburatoriStore: new LaburatoriStore(),
   kontaktiStore: new KontaktiStore(),
   sallaStore: new SallaStore(),
   paraleljaStore: new ParaleljaStore(),
   klasaStore: new KlasaStore(),
   vleresimiStore: new VlersimiStore(),
-  pajisjetStore: new PajisjaStore(),
   libriStore: new LibriStore(),
-  familjaStore: new FamiljaStore()
+  familjaStore: new FamiljaStore(),
+  //studentetStore: new StudentetStore()
 };
 
 export const StoreContext = createContext(store);

@@ -22,11 +22,9 @@ export default observer(function NavBar() {
           />
           <Link to="/">Gjimnazi</Link>
         </Menu.Item>
-        <Menu.Item as={NavLink} to="/adminPage/paneli" name="Paneli" />
         <Dropdown item text='Organizimi i klasave'>
           <Dropdown.Menu>
             <Dropdown.Item as={NavLink} to="/adminPage/klasat" name="Klasat" >Klasat </Dropdown.Item>
-            <Dropdown.Item as={NavLink} to="/adminPage/laburatoret" name="Laboratoret" >Laboratoret </Dropdown.Item>
             <Dropdown.Item as={NavLink} to="/adminPage/sallat" name="Sallat" >Sallat </Dropdown.Item>
             <Dropdown.Item as={NavLink} to="/adminPage/paralelet" name="Paralelet" >Paralelet </Dropdown.Item>
           </Dropdown.Menu>
@@ -46,12 +44,10 @@ export default observer(function NavBar() {
             <Dropdown.Item as={NavLink} to="/adminPage/oraret" name="Oraret" >Oraret</Dropdown.Item>
             <Dropdown.Item as={NavLink} to="/adminPage/lendet" name="Lendet" >Lendet</Dropdown.Item>
             <Dropdown.Item as={NavLink} to="/adminPage/njoftimet" name='Njoftimet'>Njoftimet</Dropdown.Item>
-            <Dropdown.Item as={NavLink} to="/adminPage/aktivitetet" name='Aktivitetet' >Aktivitetet</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
 
 
-        <Menu.Item as={NavLink} to="/adminPage/pajisjet" name="Pajisjet" />
         <Menu.Item as={NavLink} to="/adminPage/librat" name='Librat' />
         <Menu.Item as={NavLink} to="/adminPage/syllabuset" name='Syllabuset' />
 
@@ -73,36 +69,7 @@ export default observer(function NavBar() {
             </Dropdown.Menu>
           </Dropdown>
         </Menu.Item>
-        {/* <Menu.Item position='right'>
-          <Image src={prof?.image || '/assets/user.png'} avatar spaced='right' />
-          <Dropdown pointing='top right' text={prof?.displayName}>
-            <Dropdown.Menu>
-              <Dropdown.Item as={Link} to={'/ProfProfili'} text="Profili Im" icon='user' />
-              <Dropdown.Item onClick={logoutProf} text='Ckycu' icon='power' />
-            </Dropdown.Menu>
-          </Dropdown>
-        </Menu.Item>
-
-        <Menu.Item position='right'>
-          <Image src={prindi?.image || '/assets/user.png'} avatar spaced='right' />
-          <Dropdown pointing='top right' text={prindi?.displayName}>
-            <Dropdown.Menu>
-              <Dropdown.Item as={Link} to={`/profili/${prindi?.username}`} text="Profili Im" icon='user' />
-              <Dropdown.Item onClick={logoutPrindi} text='Ckycu' icon='power' />
-            </Dropdown.Menu>
-          </Dropdown>
-        </Menu.Item> */}
-
-        {/* <Menu.Item style={{ marginInlineStart: "auto" }}>
-          <Link to="/Profili">
-            <div className="ui vertical animated button">
-              <div className="hidden content">Profili</div>
-              <div className="visible content">
-                <Icon style={{ fontSize: "1.5em" }} name="user"></Icon>
-              </div>
-            </div>
-          </Link>
-        </Menu.Item> */}
+   
       </Container>
     </Menu>
   );

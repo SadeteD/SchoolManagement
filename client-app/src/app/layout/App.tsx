@@ -3,21 +3,18 @@ import { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { Container } from "semantic-ui-react";
-
 import HomePage from "../../features/home/homePage";
 import Dashboard from "../../features/nxenesiFromAdmin/dashboard/Dashboard";
 import LendetDashboard from "../../features/lendet/dashboard/LendetDashboard";
 import LendetDetails from "../../features/lendet/details/LendetDetails";
 import LendaForm from "../../features/lendet/form/LendaForm";
 import NxenesiDashboard from "../../features/nxenesit/dashboard/NxenesiDashboard";
-import Paneli from "../../features/paneli/Paneli";
 import PostimetDashboard from "../../features/postimet/dashboard/PostimetDashboard";
 import PostimetDetails from "../../features/postimet/details/PostimetDetails";
 import LoginFormPrindi from "../../features/prinderit/form/LoginFormPrindi";
 import ShowPrinderit from "../../features/prinderit/showPrindi";
 import LoginFormProf from "../../features/profesoret/form/LoginFormProf";
 import ShowProfessors from "../../features/profesoret/profesoret";
-import ShowLaburatoret from "../../features/laburatori/laburatoret";
 import ProfProfileDashboard from "../../features/profesoret/profProfile/ProfProfileDashboard";
 import LoginForm from "../../features/users/LoginForm";
 import ProfessorPage from "../../professorFeatures/ProfessorPage";
@@ -45,10 +42,8 @@ import KlasaDetails from "../../features/klasat/details/KlasaDetails";
 import ShowVlersimet from "../../professorFeatures/vleresimet";
 import NjoftimiDashboard from "../../features/njoftimet/dashboard/NjoftimiDashboard";
 import DashboardNjoftimi from "../../features/njoftimet/dashboardFromNxenesiandProfesori/DashboardNjoftimi";
-import PajisjetDashboard from "../../features/pajisjet/dashboard/PajisjetDashboard";
 import LibriDashboard from "../../features/librat/dashboart/LibriDashboard";
 import DashboardLibri from "../../features/librat/libratViewFromNxenesi/DashboardLibri";
-import AktivitetetDashboard from "../../features/aktivitetet/dashboard/AktivitetetDashboard";
 import FamiljaDetails from "../../features/familjet/FamiljaDetails";
 import FamiljaDashboard from "../../features/familjet/FamiljaDashboard";
 import NxenesiFeedbacks from "../../nxenesiFeatures/dashboard/NxenesiFeedbacks";
@@ -56,7 +51,6 @@ import AdminProfileDashboard from "../../features/admin/AdminProfileDashboard";
 import SyllabusetDashboard from "../../features/syllabuset/dashboard/SyllabusetDashboard";
 import ShowFeedbacks from "../../professorFeatures/feedbacks/ShowFeedbacks";
 import OraretDashboardStudenti from "../../features/oraret/OraretDashboardStudenti";
-import AktivitetetDashboardStudenti from "../../features/aktivitetet/AktivitetetDashboardStudenti";
 
 
 import FemijaDashboard from "../../prindiFeatures/dashboard/FemijaDashboard";
@@ -79,30 +73,6 @@ function App() {
       <ToastContainer position="bottom-right" hideProgressBar />
       <ModalContainer />
       <Route exact path="/" component={HomePage} />
-
-      {/* <Route path="/professorPage" component={ProfessorPage} />
-      <Route
-        path={"/professorPage/(.+)"}
-        render={() => (
-          <>
-            <NavBarProf />
-
-            <Container style={{ marginTop: "7em" }}>
-              <Switch>
-                <Route
-                  path="/professorPage/ProfProfili"
-                  component={ProfProfileDashboard}
-                />
-                <Route
-                  path="/professorPage/Kontaktet"
-                  component={kontaktetProf}
-                />
-              </Switch>
-            </Container>
-          </>
-        )}
-      /> */}
-
       <Route path="/professorPage" component={ProfessorPage} />
       <Route
         path={"/professorPage/(.+)"}
@@ -188,10 +158,6 @@ function App() {
                   path="/nxenesiPage/oraret"
                   component={OraretDashboardStudenti}
                 />
-                <Route
-                  path="/nxenesiPage/aktivitetet"
-                  component={AktivitetetDashboardStudenti}
-                />
               </Switch>
             </Container>
           </>
@@ -206,7 +172,6 @@ function App() {
             <NavBar />
             <Container style={{ marginTop: "7em" }}>
               <Switch>
-                <Route path="/adminPage/paneli" component={Paneli} />
                 <Route
                   exact
                   path="/adminPage/Profili"
@@ -243,16 +208,8 @@ function App() {
                   component={LoginFormPrindi}
                 />
                 <Route
-                  path="/adminPage/laburatoret"
-                  component={ShowLaburatoret}
-                />
-                <Route
                   path="/adminPage/syllabuset"
                   component={SyllabusetDashboard}
-                />
-                <Route
-                  path="/adminPage/pajisjet"
-                  component={PajisjetDashboard}
                 />
                 <Route
                   path={["/adminPage/krijoLende", "/adminPage/manageLenda/:id"]}
@@ -262,11 +219,6 @@ function App() {
                   exact
                   path="/adminPage/sallat"
                   component={SallaDashboard}
-                />
-                <Route
-                  exact
-                  path="/adminPage/aktivitetet"
-                  component={AktivitetetDashboard}
                 />
                 <Route path="/adminPage/paralelet/:id" component={SallaDetails} />
                 <Route

@@ -11,7 +11,6 @@ import { store } from "../stores/store";
 import { Professor, ProfFormValues } from "../models/professor";
 import { Parent, ParentFormValues } from "../models/parent";
 import { FeedbackToNxenesi } from "../models/feedbackToNxenesi";
-import { Laburatori } from "../models/laburatori";
 import { Kontakti } from "../models/kontakti";
 import { Nxenesiuser, NxenesiuserFormValues } from "../models/nxenesiuser";
 import { Salla } from "../models/salla";
@@ -19,7 +18,6 @@ import { Paralelja } from "../models/paralelja";
 import { Klasa } from "../models/klasa";
 import { Vleresimi } from "../models/Vleresimi";
 import { Njoftimi } from "../models/njoftimi";
-import { Pajisja } from "../models/pajisja";
 import { Libri } from "../models/libri";
 import { Aktiviteti } from "../models/Aktiviteti";
 import { Autobusi } from "../models/Autobusi";
@@ -201,24 +199,6 @@ const FeedbackToNxenesit = {
     axios.post<void>(`/FeedbackToNxenesit/`, feedback),
   delete: (id: string) => axios.delete<void>(`/FeedbackToNxenesit/${id}`),
 };
-const Laburatoret = {
-  list: () => requests.get<Laburatori[]>("/laburatori"),
-  details: (id: string) => requests.get<Laburatori>(`/laburatori/${id}`),
-  create: (laburatori: Laburatori, LendaId: string) =>
-    axios.post<void>(`/laburatori/${LendaId}`, laburatori),
-  update: (laburatori: Laburatori) =>
-    axios.put<void>(`/laburatori/${laburatori.id}`, laburatori),
-  delete: (id: string) => axios.delete<void>(`/laburatori/${id}`),
-};
-const Pajisjet = {
-  list: () => requests.get<Pajisja[]>("/pajisjet"),
-  details: (id: string) => requests.get<Pajisja>(`/pajisjet/${id}`),
-  create: (pajisja: Pajisja, LabId: string) =>
-    axios.post<void>(`/pajisjet/${LabId}`, pajisja),
-  update: (pajisja: Pajisja) =>
-    axios.put<void>(`/pajisjet/${pajisja.pajisjaId}`, pajisja),
-  delete: (id: string) => axios.delete<void>(`/pajisjet/${id}`),
-};
 const Kontaktet = {
   listPrindi: (id: string | undefined) =>
     requests.get<Kontakti[]>(`/kontakti/${id}`),
@@ -299,7 +279,6 @@ const agent = {
   AccountProf,
   AccountPrindi,
   FeedbackToNxenesit,
-  Laburatoret,
   Kontaktet,
   AccountNxenesi,
   Sallat,
@@ -307,7 +286,6 @@ const agent = {
   Paralelet,
   Klasat,
   Vleresimet,
-  Pajisjet,
   Librat,
   Aktivitetet,
   Familjet

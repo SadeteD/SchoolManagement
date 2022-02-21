@@ -12,6 +12,8 @@ export default function AdminProfile() {
             <Grid.Row>
                 <Grid.Column width={4}>
                     <img src="/assets/user.png" alt="logo" />
+                    <img src="/assets/admin.png"  />
+
                 </Grid.Column>
                 <Grid.Column width={2}></Grid.Column>
                 <Grid.Column width={10}>

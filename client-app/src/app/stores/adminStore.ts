@@ -6,7 +6,7 @@ import { store } from "./store";
 
 export default class AdminStore {
   user: Admin | null = null;
-  //adminMode:boolean=false;
+
 
   token: string | null = window.localStorage.getItem('jwt');
 
@@ -42,8 +42,5 @@ export default class AdminStore {
       console.log(error);
     }
   }
-  //const [adminMode, setAdminMode] = useState(false);
-  //  handleSetAdminMode=()=> {
-  //  this.adminMode=true
-  // }
+  
 }

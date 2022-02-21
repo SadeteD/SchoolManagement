@@ -32,6 +32,8 @@ namespace Persistence
         public DbSet<Libri> Librat { get; set; }
         public DbSet<Aktiviteti> Aktivitetet { get; set; }
         public DbSet<ProfesoriKlasa> ProfesoriKlasa { get; set; }
+        public DbSet<Student> Studentet { get; set; }
+        
 
 
         protected override void OnModelCreating(ModelBuilder modelbuilder)
