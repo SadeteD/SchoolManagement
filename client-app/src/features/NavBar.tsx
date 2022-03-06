@@ -20,7 +20,7 @@ export default observer(function NavBar() {
             alt="logo"
             style={{ marginRight: "10px" }}
           />
-          <Link to="/">Gjimnazi</Link>
+          <Link to="/">PowerSchool</Link>
         </Menu.Item>
         <Dropdown item text='Organizimi i klasave'>
           <Dropdown.Menu>
@@ -30,7 +30,7 @@ export default observer(function NavBar() {
           </Dropdown.Menu>
         </Dropdown>
 
-        <Dropdown item text='Frymore'>
+        <Dropdown item text='Profesoret'>
           <Dropdown.Menu>
             <Dropdown.Item as={NavLink} to="/adminPage/profesoret" name="Profesoret">Profesoret</Dropdown.Item>
             <Dropdown.Item as={NavLink} to="/adminPage/prinderit" name="Prinderit">Prinderit</Dropdown.Item>
@@ -39,7 +39,7 @@ export default observer(function NavBar() {
           </Dropdown.Menu>
         </Dropdown >
 
-        <Dropdown item text='Jo Frymore'>
+        <Dropdown item text='Lendet'>
           <Dropdown.Menu>
             <Dropdown.Item as={NavLink} to="/adminPage/oraret" name="Oraret" >Oraret</Dropdown.Item>
             <Dropdown.Item as={NavLink} to="/adminPage/lendet" name="Lendet" >Lendet</Dropdown.Item>

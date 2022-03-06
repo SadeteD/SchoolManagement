@@ -40,14 +40,7 @@ export default observer(function LendetDashboard() {
                     <Button onClick={() => openForm()} color='green' content='Krijo Lende' size='big' ></Button>
                 </Container>
 
-                <h2 >Te Dhenat Per Lenden:</h2>
-
-                {selectedLenda && !editMode &&
-                    <LendetDetails
-                    />}
-                {editMode &&
-                    <LendetForm />}
-                <LendetFilter />
+               
 
             </Grid.Column>
         </Grid>

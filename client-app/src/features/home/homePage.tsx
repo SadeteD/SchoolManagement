@@ -16,7 +16,7 @@ export default observer(function HomePage() {
     return (
         <Segment inverted textAlign='center' vertical className='masthead'>
             <Container text>
-            <Image  src='assets/school.png'  style={{ marginBottom: 12 }} />
+            {/* <Image  src='assets/school.png'  style={{ marginBottom: 12 }} /> */}
                 <Header as='h1' inverted>
                    
                     Menaxhimi i Shkollës

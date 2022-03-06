@@ -12,19 +12,17 @@ export default observer(function NavBarProf() {
       <Container>
         <Menu.Item header>
           <img
-            src="/assets/school.png"
+            src="/assets/logo.png"
             alt="logo"
             style={{ marginRight: "10px" }}
           />
-          <Link to="/">Gjimnazi</Link>
+          <Link to="/">PowerSchool</Link>
         </Menu.Item>
 
         <Menu.Item as={NavLink} to="/professorPage/ProfProfili" name="Profili im" />
         <Menu.Item as={NavLink} to="/professorPage/ProfNjoftimet" content='Njoftimet'/>
-        <Menu.Item as={NavLink} to="/professorPage/Kontaktet" name="Kontaktet" />
         <Menu.Item as={NavLink} to="/professorPage/Vlersimet" name="Vlersimet" />
         <Menu.Item as={NavLink} to="/professorPage/Studentet" name="Studentet" />
-        <Menu.Item as={NavLink} to="/professorPage/ProfFeedbacks" name="Feedbacks" />
         <Menu.Item onClick={logoutProf} text='Ckycu' icon='power' />
 
 

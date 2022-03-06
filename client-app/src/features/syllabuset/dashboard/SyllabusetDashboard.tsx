@@ -37,14 +37,7 @@ export default observer(function SyllabusetDashboard() {
                     <Button onClick={() => openForm()} color='green' content='Krijo Syllabusin' size='big' ></Button>
                 </Container>
 
-                <h2 >Te Dhenat Per Syllabusin:</h2>
-
-                {selectedSyllabusi && !editMode &&
-                    <SyllabusetDetails />
-                }
-                {editMode &&
-                    <SyllabusetForm />}
-
+                
             </Grid.Column>
         </Grid>
     )

@@ -115,9 +115,9 @@ namespace Persistence
             {
                 var nxenesit = new List<Nxenesi>
                 {
-                    new Nxenesi{DisplayName = "Erin Lekiqi", FullName = "Erin Lekiqi", ParentName = "Naim", DateOfBirth = new DateTime(2003, 12, 31), Class = "X/1", PhoneNumber = "044-555-660", YearOfRegistration = 2018, UserName= "erinlekiqi", Email= "erinlekiqi@student.edu"},
-                    new Nxenesi{DisplayName = "Mal Haziri", FullName = "Mal Haziri", ParentName = "Armend", DateOfBirth = new DateTime(2002, 10, 28), Class = "XI/2", PhoneNumber = "044-550-660", YearOfRegistration = 2019, UserName= "malhaziri", Email= "malhaziri@student.edu"},
-                    new Nxenesi{DisplayName = "Erona Lekiqi", FullName = "Erona Lekiqi", ParentName = "Naim", DateOfBirth = new DateTime(2004, 10, 10), Class = "XII/1", PhoneNumber = "044-021-660", YearOfRegistration = 2018, UserName= "eronalekiqi", Email= "eronalekiqi@student.edu"}
+                    new Nxenesi{DisplayName = "Sadete Dragaj", FullName = "Sadete Dragaj", ParentName = "Shaqir", DateOfBirth = new DateTime(2002, 10, 28), Class = "XI/1", PhoneNumber = "044-111-600", YearOfRegistration = 2019, UserName= "sadetedragaj", Email= "sadetedragaj@student.edu"},
+                    new Nxenesi{DisplayName = "Ruana Zeqiri", FullName = "Ruana Zeqiri", ParentName = "Besnik", DateOfBirth = new DateTime(2002, 10, 28), Class = "X/3", PhoneNumber = "044-223-620", YearOfRegistration = 2018, UserName= "ruanazeqiri", Email= "ruanazeqiri@student.edu"},
+                    new Nxenesi{DisplayName = "Albion Jakupi", FullName = "Albion Jakupi", ParentName = "Fatmir", DateOfBirth = new DateTime(2004, 10, 10), Class = "XII/1", PhoneNumber = "044-043-450", YearOfRegistration = 2017, UserName= "albionjakupi", Email= "albionjakupi@student.edu"}
 
                 };
 
@@ -128,69 +128,7 @@ namespace Persistence
             }
 
         }
-        //    
-        // public static async Task SeedDataPrinderitNxenesit(DataContext context)
-        // {
-        //     if (context.Nxenesit.Any()) return;
-        //     var nxenesit = new List<Nxenesi>
-        //     {
-        //         new PrindiNxenesi
-        //         {
-        //             PrindiId = "7cb47c32-acde-4f26-b684-e85c1e33b199",
-        //             NxenesiId = "66F2C262-1B35-414D-9E9F-E807D0F3A520"
-        //         }
-
-        //     };
-
-        //     await context.Nxenesit.AddRangeAsync(nxenesit);
-        //     await context.SaveChangesAsync();
-        // }
-        // public static async Task SeedDataKlasa(DataContext context)
-        // {
-        //     if (context.Klasat.Any()) return;
-        //     var klasat = new List<Klasa>
-        //     {
-        //         new Klasa
-        //         {
-        //             Viti = 10,
-        //             ParaleljaId = 1,
-        //             EmriSalles = "A01"
-        //         },
-        //         new Klasa
-        //         {
-        //             Viti = 10,
-        //             ParaleljaId = 2,
-        //             EmriSalles = "A02"
-        //         },
-        //         new Klasa
-        //         {
-        //             Viti = 10,
-        //             ParaleljaId = 3,
-        //             EmriSalles = "A03"
-        //         },
-        //         new Klasa
-        //         {
-        //             Viti = 11,
-        //             ParaleljaId = 1,
-        //             EmriSalles = "A11"
-        //         },
-        //         new Klasa
-        //         {
-        //             Viti = 11,
-        //             ParaleljaId = 2,
-        //             EmriSalles = "A12"
-        //         },
-        //         new Klasa
-        //         {
-        //             Viti = 12,
-        //             ParaleljaId = 1,
-        //             EmriSalles = "A13"
-        //         },
-        //     };
-
-        //     await context.Klasat.AddRangeAsync(klasat);
-        //     await context.SaveChangesAsync();
-        // }
+       
     }
 
 }

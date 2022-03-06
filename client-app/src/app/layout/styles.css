@@ -3,7 +3,7 @@ body{
   background-image: image( 'assets/school.png');
 }
 .ui.inverted.top.fixed.menu{
-  background-image: linear-gradient(135deg, rgb(180, 140, 88) 0%, rgb(235, 190, 140) 69%, rgb(245, 194, 136) 89%) !important;
+  background-image: image('assets/school.png') !important;
 }
 .ui.menu>.container {
   width: 100%;
@@ -25,9 +25,8 @@ body{
 
 .masthead {
   display: flex;
-  align-items: center;
   background-image: image( 'assets/school.png');
-  height: 120vh;
+  height: 110vh;
 }
 
 .masthead .ui.menu .ui.button,

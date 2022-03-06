@@ -15,7 +15,7 @@ export default observer(function NavBarNxenesi() {
             alt="logo"
             style={{ marginRight: "10px" }}
           />
-          <Link to="/">Gjimnazi</Link>
+          <Link to="/">PowerSchool</Link>
         </Menu.Item>
 
         <Menu.Item as={NavLink} to="/nxenesiPage/profili" content="Profili im" />

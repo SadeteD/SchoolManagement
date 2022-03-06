@@ -1,3 +1,6 @@
 .ui.text.container {
      max-width: 100% !important;
 }
+.body{
+     background-image: url("school.png") ;
+}
